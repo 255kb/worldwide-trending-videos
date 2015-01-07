@@ -1,0 +1,142 @@
+// Core variables and mixins
+@import "bs-less/variables.less";
+@import "bs-less/mixins.less";
+
+// Reset and dependencies
+@import "bs-less/normalize.less";
+@import "bs-less/print.less";
+@import "bs-less/glyphicons.less";
+
+// Core CSS
+@import "bs-less/scaffolding.less";
+@import "bs-less/type.less";
+@import "bs-less/code.less";
+@import "bs-less/grid.less";
+@import "bs-less/tables.less";
+@import "bs-less/forms.less";
+@import "bs-less/buttons.less";
+
+// Components
+@import "bs-less/component-animations.less";
+@import "bs-less/dropdowns.less";
+@import "bs-less/button-groups.less";
+@import "bs-less/input-groups.less";
+@import "bs-less/navs.less";
+@import "bs-less/navbar.less";
+@import "bs-less/breadcrumbs.less";
+@import "bs-less/pagination.less";
+@import "bs-less/pager.less";
+@import "bs-less/labels.less";
+@import "bs-less/badges.less";
+@import "bs-less/jumbotron.less";
+@import "bs-less/thumbnails.less";
+@import "bs-less/alerts.less";
+@import "bs-less/progress-bars.less";
+@import "bs-less/media.less";
+@import "bs-less/list-group.less";
+@import "bs-less/panels.less";
+@import "bs-less/responsive-embed.less";
+@import "bs-less/wells.less";
+@import "bs-less/close.less";
+
+// Components w/ JavaScript
+@import "bs-less/modals.less";
+@import "bs-less/tooltip.less";
+@import "bs-less/popovers.less";
+@import "bs-less/carousel.less";
+
+// Utility classes
+@import "bs-less/utilities.less";
+@import "bs-less/responsive-utilities.less";
+
+@font-family-base:'Open sans',sans-serif;
+@brand-primary:#e62e00;
+@input-group-addon-bg:@input-bg;
+
+@ui-gray-base:              darken(@gray-lighter, 60%);
+@ui-gray-darker:            darken(@gray-lighter, 45%);
+@ui-gray-dark:              darken(@gray-lighter, 30%);
+@ui-gray:                   darken(@gray-lighter, 15%);
+@ui-gray-light:             darken(@gray-lighter, 5%);
+@ui-gray-lighter:           #fafafa;
+
+@ui-fade-out-start:			rgba(red(@ui-gray-light),green(@ui-gray-light),blue(@ui-gray-light),0);
+@ui-fade-out-end:			rgba(red(@ui-gray-light),green(@ui-gray-light),blue(@ui-gray-light),1);
+
+@ui-spacing:20px;
+
+body{
+    overflow-y:scroll;
+    text-shadow: 1px 1px #eee;
+    background-color:@ui-gray-darker;
+}
+.nts{
+    text-shadow: none;
+}
+.input-group-addon{
+    font-size:18px;
+    color:@brand-primary;
+}
+.header{
+    background-color:
+    @ui-gray-lighter;
+}
+.title{
+    margin-top:@ui-spacing;
+    margin-bottom:@ui-spacing;
+}
+.content{
+    background-color:@ui-gray-light;
+    padding: @ui-spacing 0;
+    border-top:2px solid @ui-gray;
+    border-bottom:2px solid @ui-gray-dark;
+}
+.player{
+    margin-bottom:@ui-spacing;
+}
+.description{
+    cursor:pointer;
+    margin-top:@ui-spacing/2;
+    overflow:hidden;
+}
+.description.s{
+    max-height:60px;
+}
+.dislikes{
+    margin-left:@ui-spacing/2;
+}
+.video-list .media{
+    cursor:pointer;
+    padding:@ui-spacing/2 @ui-spacing/4 @ui-spacing/2 0;
+    margin-top:0;
+}
+.video-list .media:hover{
+    background-color:@ui-gray;
+}
+.next-page{
+    color:@brand-primary;
+    font-size:30px;
+    text-align:center;
+    cursor:pointer;
+}
+.footer{
+    margin:@ui-spacing 0;
+}
+.fade-out{
+    position:relative;
+}
+.fade-out:after{
+    display:block;
+    position:absolute;
+    right:0;
+    left:0;
+    bottom:0;
+    height:20px;
+    content:"";
+    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0%,@ui-fade-out-start),color-stop(100%,@ui-fade-out-end));
+    background-image: -webkit-linear-gradient(top,@ui-fade-out-start,@ui-fade-out-end);
+    background-image: -moz-linear-gradient(top,@ui-fade-out-start,@ui-fade-out-end);
+    background-image: -ms-linear-gradient(top,@ui-fade-out-start,@ui-fade-out-end);
+    background-image: -o-linear-gradient(top,@ui-fade-out-start,@ui-fade-out-end);
+    background: linear-gradient(to bottom,@ui-fade-out-start,@ui-fade-out-end);
+}
