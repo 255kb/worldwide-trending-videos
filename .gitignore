@@ -220,3 +220,7 @@ pip-log.txt
 #############
 
 *.idea
+
+.firebaserc
+database.rules.json
+firebase.json
